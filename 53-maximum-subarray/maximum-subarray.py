@@ -9,5 +9,6 @@ class Solution(object):
         for i in nums:
             curSum += i
             maxSum = max(maxSum, curSum)
-            curSum = max(curSum, 0)
+            if curSum < 0:
+                curSum = 0
         return maxSum
