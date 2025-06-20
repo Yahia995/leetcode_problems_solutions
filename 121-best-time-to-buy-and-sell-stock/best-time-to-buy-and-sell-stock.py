@@ -11,7 +11,8 @@ class Solution(object):
             if prices[left] > prices[right]:
                 left = right
             else:
-                maxP = max(maxP, prices[right] - prices[left])
+                profit = prices[right] - prices[left]
+                maxP = max(maxP, profit)
             right += 1
         
         return maxP
