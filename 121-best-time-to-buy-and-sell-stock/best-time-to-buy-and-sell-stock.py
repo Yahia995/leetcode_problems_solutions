@@ -8,10 +8,10 @@ class Solution(object):
         maxP = 0
         
         while right < len(prices):
-            if prices[left] > prices[right]:
-                left = right
-            else:
+            if prices[left] <= prices[right]:
                 maxP = max(maxP, prices[right] - prices[left])
+            else:
+                left = right
             right += 1
         
         return maxP
